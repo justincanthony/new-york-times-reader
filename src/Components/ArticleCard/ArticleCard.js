@@ -26,15 +26,14 @@ export const ArticleCard = ({ article }) => {
           component="img"
           height="140"
           image={multimedia[4].url}
-          alt={multimedia[4].abstract}
+          alt="{multimedia[4].caption}"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {publish_date}
           </Typography>
         </CardContent>
       </CardActionArea>
