@@ -16,6 +16,10 @@ export const StoryContainer = ({ uri }) => {
       .catch((err) => setError(err));
   };
 
+  useEffect(() => {
+    getSingleStory();
+  });
+
   return (
     <div>
       <FullStoryCard story={story} />
