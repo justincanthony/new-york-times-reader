@@ -1,5 +1,6 @@
 import React from 'react';
-import './Header.css';
+// import './Header.css';
+import { Link } from 'react-router-dom';
 import { AppBar } from '@mui/material';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,7 +13,7 @@ export const Header = () => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            New York Times Top Stories
+            <Link to="/">New York Times Top Stories</Link>
           </Typography>
         </Toolbar>
       </AppBar>
