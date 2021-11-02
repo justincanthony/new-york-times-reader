@@ -1,6 +1,6 @@
 import React from 'react';
 import './ArticleCard.css';
-
+import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -20,24 +20,26 @@ export const ArticleCard = ({ article }) => {
   } = article;
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={multimedia[4].url}
-          alt="{multimedia[4].caption}"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {publish_date}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <Link to={`/article/${uri}`}>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="140"
+            image={multimedia[4].url}
+            alt="{multimedia[4].caption}"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {title}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {publish_date}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </Link>
   );
 };
 
