@@ -1,14 +1,20 @@
+import { Route, Switch } from 'react-router-dom';
 import { ArticleContainer } from '../ArticleContainer/ArticleContainer';
 import { Header } from '../Header/Header';
 import './App.css';
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
       <Header />
-      <ArticleContainer />
+      <Switch>
+        <Route exact path="/" render={() => <ArticleContainer />} />
+        <Route
+          exact
+          path="/article/:uri"
+          render={({ match }) => <StoryContainer uri={match.params.uri} />}
+        />
+      </Switch>
     </div>
   );
-}
-
-export default App;
+};
