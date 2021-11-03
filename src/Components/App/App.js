@@ -13,8 +13,7 @@ const App = () => {
         <Route
           path="/article/:title"
           render={({ match }) => {
-            console.log(match);
-            return <SingleStoryContainer uri={match.params} />;
+            return <SingleStoryContainer title={match.params.title} />;
           }}
         />
       </Switch>
