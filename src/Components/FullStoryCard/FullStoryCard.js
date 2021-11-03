@@ -1,11 +1,14 @@
 import React from 'react';
 import './FullStoryCard.css';
+import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
+import { Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 
-export const FullStoryCard = ({ story }) => {
-  console.log(story);
+export const FullStoryCard = ({ story, setIsHome }) => {
+  setIsHome(false);
+
   return (
     <Card variant="outlined">
       <CardContent>
@@ -14,6 +17,9 @@ export const FullStoryCard = ({ story }) => {
           <p>{story.abstract}</p>
         </Typography>
       </CardContent>
+      <Link to="/">
+        <Button variant="inherit">Go Back</Button>
+      </Link>
     </Card>
   );
 };
