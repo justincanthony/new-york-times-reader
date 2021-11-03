@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 
 export const FullStoryCard = ({ story }) => {
+  console.log(story);
   return (
     <Card variant="outlined">
       <CardContent>
