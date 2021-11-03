@@ -8,19 +8,10 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 export const ArticleCard = ({ article }) => {
-  const {
-    multimedia,
-    uri,
-    publish_date,
-    section,
-    title,
-    updated_date,
-    byline,
-    abstract,
-  } = article;
+  const { multimedia, publish_date, title, id } = article;
 
   return (
-    <Link to={`/article/${title}`}>
+    <Link to={`/article/${id}`}>
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
           <CardMedia
