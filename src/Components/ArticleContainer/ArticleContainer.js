@@ -5,7 +5,6 @@ import { ArticleCard } from '../ArticleCard/ArticleCard';
 import { v4 as uuidv4 } from 'uuid';
 
 export const ArticleContainer = ({ topStories }) => {
-  console.log(topStories);
   const newsCards = topStories.map((story) => (
     <ArticleCard key={uuidv4()} article={story} />
   ));
