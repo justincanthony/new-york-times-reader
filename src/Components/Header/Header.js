@@ -6,14 +6,22 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { withTheme } from '@emotion/react';
 
 export const Header = ({ isHome }) => {
+  const headerColor = {
+    backgroundColor: 'black',
+    color: 'white',
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={headerColor}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link to="/">New York Times Top Stories</Link>
+            <Link className="title" to="/">
+              New York Times Top Stories
+            </Link>
           </Typography>
           {isHome && (
             <Button
