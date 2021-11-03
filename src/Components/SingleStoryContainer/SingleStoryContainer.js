@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import './StoryContainer.css';
+import './SingleStoryContainer.css';
 import { getStory } from '../../apiCalls';
 import { FullStoryCard } from '../FullStoryCard/FullStoryCard';
 
-export const StoryContainer = ({ uri }) => {
+export const SingleStoryContainer = ({ uri }) => {
   console.log(uri);
 
   const [story, setStory] = useState({});
@@ -18,7 +18,7 @@ export const StoryContainer = ({ uri }) => {
 
   useEffect(() => {
     getSingleStory();
-  });
+  }, []);
 
   return (
     <div>
