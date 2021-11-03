@@ -12,7 +12,7 @@ export const ArticleContainer = ({ topStories, setIsHome }) => {
 
   return (
     <React.Fragment>
-      <section component="section">{newsCards}</section>
+      <section className="articleContainer">{newsCards}</section>
     </React.Fragment>
   );
 };
