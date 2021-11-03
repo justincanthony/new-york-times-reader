@@ -11,6 +11,7 @@ import { FullStoryCard } from '../FullStoryCard/FullStoryCard';
 const App = () => {
   const [topStories, setTopStories] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isHome, setIsHome] = useState(true);
   const [error, setError] = useState('');
 
   const addID = (data) => {
@@ -34,14 +35,19 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
+      <Header setIsHome={setIsHome} isHome={isHome} />
       <Switch>
         <Route
           exact
           path="/"
           render={() => (
             <React.Fragment>
-              {!isLoading && <ArticleContainer topStories={topStories} />}
+              {!isLoading && (
+                <ArticleContainer
+                  topStories={topStories}
+                  setIsHome={setIsHome}
+                />
+              )}
               {isLoading && <p>Loading...</p>}
               {!isLoading && error && <p>whoops something went wrong</p>}
             </React.Fragment>
@@ -54,7 +60,7 @@ const App = () => {
             const story = topStories.find(
               (article) => article.id === match.params.id
             );
-            return <FullStoryCard story={story} />;
+            return <FullStoryCard story={story} setIsHome={setIsHome} />;
           }}
         />
         {/* <Route render={() => <ErrorPage />} /> */}
