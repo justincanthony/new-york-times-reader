@@ -1,24 +1,24 @@
 import { useState, useEffect } from 'react';
 import './SingleStoryContainer.css';
-import { getStory } from '../../apiCalls';
+import { getTopStories } from '../../apiCalls';
 import { FullStoryCard } from '../FullStoryCard/FullStoryCard';
+let story;
 
-export const SingleStoryContainer = ({ uri }) => {
-  console.log(uri);
-
-  const [story, setStory] = useState({});
+export const SingleStoryContainer = ({ title }) => {
+  const [stories, setStories] = useState([]);
   const [error, setError] = useState('');
 
-  const getSingleStory = (uri) => {
-    getStory(uri)
-      .then((data) => console.log(data))
-      // .then(data => setStory(data))
+  const getStories = () => {
+    getTopStories()
+      .then((data) => setStories(data.results))
       .catch((err) => setError(err));
   };
 
   useEffect(() => {
-    getSingleStory();
+    getStories();
   }, []);
+
+  story = stories.find((story) => story.title === title);
 
   return (
     <div>
