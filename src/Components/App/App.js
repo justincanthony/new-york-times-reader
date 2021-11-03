@@ -16,6 +16,7 @@ const App = () => {
             return <SingleStoryContainer title={match.params.title} />;
           }}
         />
+        {/* <Route render={() => <ErrorPage />} /> */}
       </Switch>
     </div>
   );
