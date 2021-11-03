@@ -9,16 +9,19 @@ let newsCards;
 
 export const ArticleContainer = () => {
   const [topStories, setTopStories] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
   const getStories = () => {
     getTopStories()
       .then((data) => setTopStories(data.results))
       .catch((err) => setError(err));
+    setIsLoading(false);
   };
 
   useEffect(() => {
     getStories();
+    setIsLoading(true);
   }, []);
 
   newsCards = topStories.map((story) => (
