@@ -19,8 +19,6 @@ export const ArticleCard = ({ article }) => {
     abstract,
   } = article;
 
-  console.log(uri, 'hello');
-
   return (
     <Link to={`/article/${title}`}>
       <Card sx={{ maxWidth: 345 }}>
