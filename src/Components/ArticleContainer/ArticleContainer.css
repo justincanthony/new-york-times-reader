@@ -8,14 +8,16 @@
 @media screen and (min-width: 730px) {
   .articleContainer {
     grid-template-columns: repeat(2, 1fr);
+    margin: auto;
   }
 }
 
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 900px) {
   .articleContainer {
   grid-template-columns: repeat(3, 1fr);
+  width: 900px;
+  margin: auto;
 }
 }
-
 
