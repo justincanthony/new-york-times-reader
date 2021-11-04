@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { ArticleContainer } from '../ArticleContainer/ArticleContainer';
 import { getTopStories } from '../../apiCalls';
-import { SingleStoryContainer } from '../SingleStoryContainer/SingleStoryContainer';
 import { Header } from '../Header/Header';
 import './App.css';
 import { FullStoryCard } from '../FullStoryCard/FullStoryCard';

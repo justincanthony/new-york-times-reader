@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
 import { AppBar } from '@mui/material';
@@ -6,7 +6,6 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { withTheme } from '@emotion/react';
 
 export const Header = ({ isHome }) => {
   const headerColor = {
