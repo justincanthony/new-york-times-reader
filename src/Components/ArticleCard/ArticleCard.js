@@ -18,7 +18,7 @@ export const ArticleCard = ({ article }) => {
         <Typography
           variant="body2"
           color="text.secondary"
-          sx={{ background: '#f4f4f4' }}
+          sx={{ background: '#f6f6f6' }}
         >
           {section.toUpperCase()}
         </Typography>
@@ -31,7 +31,7 @@ export const ArticleCard = ({ article }) => {
           />
           <CardContent sx={{ marginLeft: '2px' }}>
             <Typography
-              sx={{ background: '#f4f4f4', marginBottom: '0' }}
+              sx={{ background: '#f6f6f6', marginBottom: '0' }}
               gutterBottom
               variant="h6"
               component="div"
