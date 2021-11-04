@@ -16,53 +16,61 @@ export const FullStoryCard = ({ story, setIsHome }) => {
     <React.Fragment>
       {!story && <Redirect to="/" />}
       {story && (
-        <Card variant="outlined">
-          <CardContent>
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              sx={{ background: '#f6f6f6' }}
-            >
-              {story.section.toUpperCase()}
-            </Typography>
-            <Typography variant="h5">{story.title}</Typography>
-            <Typography variant="body2" color="text.secondary">
-              {story.byline}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Published{' '}
-              {dayjs(story.published_date).format('MMM D, YYYY [at] h:mm A')}
-            </Typography>
-            <CardMedia
-              component="img"
-              height="auto"
-              image={story.multimedia[0].url}
-              alt="{multimedia[0].caption}"
-            />
-            <Typography variant="body2" color="text.secondary" gutterBottom>
-              {story.multimedia[0].caption}
-            </Typography>
+        <section className="fullStoryWrapper">
+          <Card variant="outlined">
+            <CardContent>
+              <br />
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                sx={{ background: '#f6f6f6' }}
+              >
+                {story.section.toUpperCase()}
+              </Typography>
+              <br />
+              <Typography variant="h5">{story.title}</Typography>
+              <Typography variant="body2" color="text.secondary">
+                {story.byline}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {dayjs(story.published_date).format('MMM D, YYYY [at] h:mm A')}
+              </Typography>
+              <br />
+              <CardMedia
+                component="img"
+                width="500"
+                height="auto"
+                image={story.multimedia[0].url}
+                alt="{multimedia[0].caption}"
+              />
+              <Typography variant="body2" color="text.secondary" gutterBottom>
+                {story.multimedia[0].caption}
+              </Typography>
+              <br />
+              <Typography
+                sx={{ fontSize: 16 }}
+                color="text.secondary"
+                gutterBottom
+              >
+                {story.abstract}
+              </Typography>
+              <br />
+              <Typography
+                sx={{ fontSize: 16 }}
+                color="text.secondary"
+                gutterBottom
+              >
+                To view this story please visit{' '}
+                <a href={story.url}>The New York Times</a>
+              </Typography>
+            </CardContent>
+            <Link to="/">
+              <Button variant="inherit">Go Back</Button>
+            </Link>
             <br />
-            <Typography
-              sx={{ fontSize: 16 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              {story.abstract}
-            </Typography>
-            <Typography
-              sx={{ fontSize: 16 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              To view this story please visit{' '}
-              <a href={story.url}>The New York Times</a>
-            </Typography>
-          </CardContent>
-          <Link to="/">
-            <Button variant="inherit">Go Back</Button>
-          </Link>
-        </Card>
+            <br />
+          </Card>
+        </section>
       )}
     </React.Fragment>
   );
