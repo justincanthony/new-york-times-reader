@@ -9,7 +9,6 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 export const ArticleCard = ({ article }) => {
-  console.log(article);
   const { multimedia, published_date, title, id, byline, section } = article;
 
   return (
