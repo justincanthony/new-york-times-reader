@@ -2,7 +2,7 @@ import React from 'react';
 import './FullStoryCard.css';
 import dayjs from 'dayjs';
 
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import { Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
@@ -14,7 +14,7 @@ export const FullStoryCard = ({ story, setIsHome }) => {
 
   return (
     <React.Fragment>
-      {!story && <p>Whoops, something went wrong!</p>}
+      {!story && <Redirect to="/" />}
       {story && (
         <Card variant="outlined">
           <CardContent>
