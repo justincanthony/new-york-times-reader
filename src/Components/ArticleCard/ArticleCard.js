@@ -13,7 +13,7 @@ export const ArticleCard = ({ article }) => {
 
   return (
     <Link to={`/article/${id}`} className="articleCard">
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345, height: 460 }}>
         <Typography
           variant="body2"
           color="text.secondary"
@@ -24,7 +24,7 @@ export const ArticleCard = ({ article }) => {
         <CardActionArea>
           <CardMedia
             component="img"
-            height="auto"
+            height="250"
             image={multimedia[0].url}
             alt="{multimedia[0].caption}"
           />
