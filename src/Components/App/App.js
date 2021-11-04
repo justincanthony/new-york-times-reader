@@ -63,7 +63,7 @@ const App = () => {
             return <FullStoryCard story={story} setIsHome={setIsHome} />;
           }}
         />
-        {/* <Route render={() => <ErrorPage />} /> */}
+        <Route render={() => <p>Whoops, something went wrong!</p>} />
       </Switch>
     </div>
   );
