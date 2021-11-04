@@ -16,9 +16,9 @@ export const ArticleCard = ({ article }) => {
         <CardActionArea>
           <CardMedia
             component="img"
-            height="140"
-            image={multimedia[4].url}
-            alt="{multimedia[4].caption}"
+            height="auto"
+            image={multimedia[0].url}
+            alt="{multimedia[0].caption}"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
