@@ -108,7 +108,7 @@ To get a local copy up and running follow these simple steps.
 
 Mobile View Spec              |  Desktop View Spec
 :----------------------------:|:-------------------------:
-![MIB_mobile_gif]()|![MIB_desktop_gif]()
+![mobile_gif](https://user-images.githubusercontent.com/82064981/140534114-dfe52663-f059-4e6c-8a83-b0b493090faa.gif)|![desktop_gif](https://user-images.githubusercontent.com/82064981/140534428-c5695d81-8c28-49bb-92a1-e33e625f0848.gif)
 
 
 
@@ -161,3 +161,5 @@ Contributions are what make the open source community such an amazing place to b
 [heroku-shield]: https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white
 [github-url]: https://github.com/
 [github-shield]: https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white
+
+
